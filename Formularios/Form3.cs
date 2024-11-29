@@ -10,16 +10,18 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using CloseOut.Estructuras;
 using Proyecto_Final_CloseOut.Formularios;
+using static CloseOut.Estructuras.Productos;
+using CloseOut.Estructuras;
 
 namespace Proyecto_Final_CloseOut.Formularios
 {
     public partial class Form3 : Form
-    { 
+    {
         public static List<Productos> productos = new List<Productos>() { };
 
         private Form2 form2;
+        internal static object historialMovimientos;
 
-        
         public Form3()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace Proyecto_Final_CloseOut.Formularios
             CuentaProductosCategoria();
         }
 
-        private void Form3_Load(object sender, EventArgs e){}
+        private void Form3_Load(object sender, EventArgs e) { }
 
         private void tstAgregar_Click(object sender, EventArgs e)
         {
@@ -44,17 +46,26 @@ namespace Proyecto_Final_CloseOut.Formularios
 
         private void AgregarProducto()
         {
-            int nuevoCódigo = int.Parse(txtCodigo.Text);
+            int nuevoCodigo = int.Parse(txtCodigo.Text);
             string nuevoProducto = txtNombre.Text;
             string nuevaCategoria = cmbCategoría.SelectedItem.ToString();
             decimal nuevoPrecio = decimal.Parse(txtPrecio.Text);
             int nuevaCantidad = int.Parse(txtStock.Text);
 
-            productos.Add(new Productos(nuevoCódigo, nuevoProducto, nuevaCategoria, nuevoPrecio, nuevaCantidad));
+            productos.Add(new Productos(nuevoCodigo, nuevoProducto, nuevaCategoria, nuevoPrecio, nuevaCantidad));
             ActualizarDataGridView();
             LimpiarCampos();
             CuentaProductosCategoria();
             CargarDatosEnGrafico();
+
+            Form2.historialMovimientos.Add(new MovimientoInventario
+            {
+                Fecha = DateTime.Now,
+                TipoMovimiento = "Ingreso",
+                Producto = nuevoProducto,
+                Cantidad = nuevaCantidad,
+                Detalles = $"Se agregó el producto {nuevoProducto} con cantidad {nuevaCantidad}."
+            });
         }
 
         private void ActualizarDataGridView()
@@ -64,13 +75,55 @@ namespace Proyecto_Final_CloseOut.Formularios
         }
 
         private void tstEliminar_Click(object sender, EventArgs e)
-        {
+        { 
             int i = dgvCamisetas.CurrentCell.RowIndex;
+            var productoEliminado = productos[i];
+
             productos.RemoveAt(i);
             ActualizarDataGridView();
             ActualizarMensajeEstado();
             CuentaProductosCategoria();
             CargarDatosEnGrafico();
+
+            Form2.historialMovimientos.Add(new MovimientoInventario
+            {
+                Fecha = DateTime.Now,
+                TipoMovimiento = "Salida",
+                Producto = productoEliminado.Producto,
+                Cantidad = productoEliminado.Cantidad,
+                Detalles = $"Se eliminó el producto {productoEliminado.Producto} con cantidad {productoEliminado.Cantidad}."
+            });
+        }
+
+        private void tsbActualizar_Click(object sender, EventArgs e)
+        {
+
+            int Codigo = int.Parse(txtCodigo.Text);
+             string Producto = txtNombre.Text;
+             string Categoria = cmbCategoría.SelectedItem.ToString();
+               decimal Precio = decimal.Parse(txtPrecio.Text);
+              int   Cantidad = int.Parse(txtStock.Text);
+
+            Productos producto = new Productos(Codigo, Producto, Categoria, Precio, Cantidad);
+
+            int index = productos.FindIndex(p => p.Codigo == producto.Codigo);
+            if (index >= 0)
+            {
+                productos[index] = producto;
+            }
+
+            ActualizarDataGridView();
+            MessageBox.Show("Producto actualizado con éxito.");
+
+            
+            Form2.historialMovimientos.Add(new MovimientoInventario
+            {
+                Fecha = DateTime.Now,
+                TipoMovimiento = "Actualización",
+                Producto = producto.Producto,
+                Cantidad = producto.Cantidad,
+                Detalles = $"Se actualizó el producto {producto.Producto} con cantidad {producto.Cantidad}."
+            });
         }
 
         private void LimpiarCampos()
@@ -129,18 +182,7 @@ namespace Proyecto_Final_CloseOut.Formularios
             chart1.Invalidate();
         }
 
-        private void ActualizarMensajeEstado()
-        {
-            int totalStock = 0;
-            foreach (var producto in productos)
-            {
-                totalStock += producto.Cantidad;
-            }
-
-            toolStripStatusLabel.Text = $"Número de productos en inventario de camisetas: {totalStock}";
-        }
-
-        
+  
 
         private void toolStripButton_Click(object sender, EventArgs e)
         {
@@ -161,6 +203,26 @@ namespace Proyecto_Final_CloseOut.Formularios
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void ActualizarMensajeEstado()
+        {
+            int totalStock = 0;
+            foreach (var producto in productos)
+            {
+                totalStock += producto.Cantidad;
+
+                if (producto.Cantidad < 5)
+                {
+                    MessageBox.Show($"El producto {producto.Producto} está bajo en stock. Quedan solo {producto.Cantidad} unidades.", "Advertencia de Stock Bajo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            toolStripStatusLabel.Text = $"Número de productos en inventario de camisetas: {totalStock}";
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            ActualizarDataGridView();
         }
     }
 }

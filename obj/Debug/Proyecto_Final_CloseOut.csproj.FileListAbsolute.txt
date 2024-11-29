@@ -35,22 +35,41 @@ C:\Users\kmedi\Desktop\Proyecto_Final_CloseOut\obj\Debug\Proyecto.BB01E4F3.Up2Da
 C:\Users\kmedi\Desktop\Proyecto_Final_CloseOut\obj\Debug\Proyecto_Final_CloseOut.exe
 C:\Users\kmedi\Desktop\Proyecto_Final_CloseOut\obj\Debug\Proyecto_Final_CloseOut.pdb
 C:\Users\kmedi\Desktop\Proyecto_Final_CloseOut\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\bin\Debug\Proyecto_Final_CloseOut.exe.config
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\bin\Debug\Proyecto_Final_CloseOut.exe
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\bin\Debug\Proyecto_Final_CloseOut.pdb
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\bin\Debug\Newtonsoft.Json.dll
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\bin\Debug\Newtonsoft.Json.xml
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto.BB01E4F3.Up2Date
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.exe
-C:\Users\SONY\Desktop\Copia_Proyecto_Final\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\Alvaro\Downloads\ClosetFlow\bin\Debug\Proyecto_Final_CloseOut.exe.config
+C:\Users\Alvaro\Downloads\ClosetFlow\bin\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\Alvaro\Downloads\ClosetFlow\bin\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\Alvaro\Downloads\ClosetFlow\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Alvaro\Downloads\ClosetFlow\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alvaro\Downloads\ClosetFlow\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto.BB01E4F3.Up2Date
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\Alvaro\Downloads\ClosetFlow\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\kmedi\Desktop\ClosetFlow - copia\bin\Debug\Proyecto_Final_CloseOut.exe.config
+C:\Users\kmedi\Desktop\ClosetFlow - copia\bin\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\kmedi\Desktop\ClosetFlow - copia\bin\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\kmedi\Desktop\ClosetFlow - copia\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\kmedi\Desktop\ClosetFlow - copia\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmedi\Desktop\ClosetFlow - copia\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto.BB01E4F3.Up2Date
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.pdb

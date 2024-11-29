@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static CloseOut.Estructuras.Productos;
 
 namespace Proyecto_Final_CloseOut.Formularios
 {
@@ -17,6 +18,7 @@ namespace Proyecto_Final_CloseOut.Formularios
         public static List<Productos> productos = new List<Productos>() { };
 
         private Form2 form2;
+        internal static object historialMovimientos;
 
         public Form6(Form2 form2)
         {
@@ -60,6 +62,16 @@ namespace Proyecto_Final_CloseOut.Formularios
             LimpiarCampos();
             CuentaProductosCategoria();
             CargarDatosEnGrafico();
+
+            // Registro del movimiento en el historial
+            Form2.historialMovimientos.Add(new MovimientoInventario
+            {
+                Fecha = DateTime.Now,
+                TipoMovimiento = "Ingreso",
+                Producto = nuevoProducto,
+                Cantidad = nuevaCantidad,
+                Detalles = $"Se agregó el producto {nuevoProducto} con cantidad {nuevaCantidad}."
+            });
         }
 
         private void ActualizarDataGridView()
@@ -71,13 +83,53 @@ namespace Proyecto_Final_CloseOut.Formularios
         private void tstEliminar_Click(object sender, EventArgs e)
         {
             int i = dgvSueters.CurrentCell.RowIndex;
+            var productoEliminado = productos[i];
             productos.RemoveAt(i);
             ActualizarDataGridView();
             ActualizarMensajeEstado();
             CuentaProductosCategoria();
             CargarDatosEnGrafico();
+
+            Form2.historialMovimientos.Add(new MovimientoInventario
+            {
+                Fecha = DateTime.Now,
+                TipoMovimiento = "Salida",
+                Producto = productoEliminado.Producto,
+                Cantidad = productoEliminado.Cantidad,
+                Detalles = $"Se eliminó el producto {productoEliminado.Producto} con cantidad {productoEliminado.Cantidad}."
+            });
         }
 
+        private void tsbActualizar_Click(object sender, EventArgs e)
+        {
+
+            int Codigo = int.Parse(txtCodigo.Text);
+            string Producto = txtNombre.Text;
+            string Categoria = cmbCategoría.SelectedItem.ToString();
+            decimal Precio = decimal.Parse(txtPrecio.Text);
+            int Cantidad = int.Parse(txtStock.Text);
+
+            Productos producto = new Productos(Codigo, Producto, Categoria, Precio, Cantidad);
+
+            int index = productos.FindIndex(p => p.Codigo == producto.Codigo);
+            if (index >= 0)
+            {
+                productos[index] = producto;
+            }
+
+            ActualizarDataGridView();
+            MessageBox.Show("Producto actualizado con éxito.");
+
+            // Registro del movimiento en el historial
+            Form2.historialMovimientos.Add(new MovimientoInventario
+            {
+                Fecha = DateTime.Now,
+                TipoMovimiento = "Actualización",
+                Producto = producto.Producto,
+                Cantidad = producto.Cantidad,
+                Detalles = $"Se actualizó el producto {producto.Producto} con cantidad {producto.Cantidad}."
+            });
+        }
         private void LimpiarCampos()
         {
             txtCodigo.Clear();
@@ -140,10 +192,17 @@ namespace Proyecto_Final_CloseOut.Formularios
             foreach (var producto in productos)
             {
                 totalStock += producto.Cantidad;
+
+                // Verificar si el stock está por debajo del nivel requerido
+                if (producto.Cantidad < 4)
+                {
+                    MessageBox.Show($"El producto {producto.Producto} está bajo en stock. Quedan solo {producto.Cantidad} unidades.", "Advertencia de Stock Bajo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
-            toolStripStatusLabel.Text = $"Número de productos en inventario de sueters y chaquetas: {totalStock}";
+            toolStripStatusLabel.Text = $"Número de productos en inventario de chaquetas: {totalStock}";
         }
+
 
         private void toolStripButton_Click(object sender, EventArgs e)
         {
@@ -153,6 +212,11 @@ namespace Proyecto_Final_CloseOut.Formularios
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ActualizarDataGridView();
+        }
+
+        private void dgvSueters_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

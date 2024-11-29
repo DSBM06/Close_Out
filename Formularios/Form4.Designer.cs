@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tstAgregar = new System.Windows.Forms.ToolStripButton();
-            this.tstEliminar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.tsbSalir = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbCategoría = new System.Windows.Forms.ComboBox();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -60,6 +56,11 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvPantalones = new System.Windows.Forms.DataGridView();
+            this.tstAgregar = new System.Windows.Forms.ToolStripButton();
+            this.tstEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
+            this.tsbSalir = new System.Windows.Forms.ToolStripButton();
+            this.tsbLeer = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -75,53 +76,14 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tstAgregar,
             this.tstEliminar,
-            this.toolStripButton1,
-            this.tsbSalir});
+            this.tsbActualizar,
+            this.tsbSalir,
+            this.tsbLeer});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tstAgregar
-            // 
-            this.tstAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tstAgregar.Image = ((System.Drawing.Image)(resources.GetObject("tstAgregar.Image")));
-            this.tstAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstAgregar.Name = "tstAgregar";
-            this.tstAgregar.Size = new System.Drawing.Size(23, 22);
-            this.tstAgregar.Text = "Agregar";
-            this.tstAgregar.Click += new System.EventHandler(this.tstAgregar_Click);
-            // 
-            // tstEliminar
-            // 
-            this.tstEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tstEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tstEliminar.Image")));
-            this.tstEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEliminar.Name = "tstEliminar";
-            this.tstEliminar.Size = new System.Drawing.Size(23, 22);
-            this.tstEliminar.Text = "Eliminar";
-            this.tstEliminar.Click += new System.EventHandler(this.tstEliminar_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Actualizar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // tsbSalir
-            // 
-            this.tsbSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSalir.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalir.Image")));
-            this.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSalir.Name = "tsbSalir";
-            this.tsbSalir.Size = new System.Drawing.Size(23, 22);
-            this.tsbSalir.Text = "Salir";
-            this.tsbSalir.Click += new System.EventHandler(this.toolStripSalir_Click_1);
             // 
             // groupBox1
             // 
@@ -255,7 +217,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Detalles";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // txtProductosPorCategoria
             // 
@@ -264,7 +225,6 @@
             this.txtProductosPorCategoria.Name = "txtProductosPorCategoria";
             this.txtProductosPorCategoria.Size = new System.Drawing.Size(292, 123);
             this.txtProductosPorCategoria.TabIndex = 2;
-            this.txtProductosPorCategoria.TextChanged += new System.EventHandler(this.txtProductosPorCategoria_TextChanged);
             // 
             // label1
             // 
@@ -296,16 +256,16 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(7, 7);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(336, 196);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -347,6 +307,57 @@
             this.dgvPantalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPantalones.Size = new System.Drawing.Size(425, 415);
             this.dgvPantalones.TabIndex = 17;
+            this.dgvPantalones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPantalones_CellContentClick);
+            // 
+            // tstAgregar
+            // 
+            this.tstAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tstAgregar.Image = ((System.Drawing.Image)(resources.GetObject("tstAgregar.Image")));
+            this.tstAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstAgregar.Name = "tstAgregar";
+            this.tstAgregar.Size = new System.Drawing.Size(23, 22);
+            this.tstAgregar.Text = "Agregar";
+            this.tstAgregar.Click += new System.EventHandler(this.tstAgregar_Click);
+            // 
+            // tstEliminar
+            // 
+            this.tstEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tstEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tstEliminar.Image")));
+            this.tstEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEliminar.Name = "tstEliminar";
+            this.tstEliminar.Size = new System.Drawing.Size(23, 22);
+            this.tstEliminar.Text = "Eliminar";
+            this.tstEliminar.Click += new System.EventHandler(this.tstEliminar_Click);
+            // 
+            // tsbActualizar
+            // 
+            this.tsbActualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbActualizar.Image = ((System.Drawing.Image)(resources.GetObject("tsbActualizar.Image")));
+            this.tsbActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbActualizar.Name = "tsbActualizar";
+            this.tsbActualizar.Size = new System.Drawing.Size(23, 22);
+            this.tsbActualizar.Text = "Actualizar";
+            this.tsbActualizar.Click += new System.EventHandler(this.tsbActualizar_Click);
+            // 
+            // tsbSalir
+            // 
+            this.tsbSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSalir.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalir.Image")));
+            this.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSalir.Name = "tsbSalir";
+            this.tsbSalir.Size = new System.Drawing.Size(23, 22);
+            this.tsbSalir.Text = "Salir";
+            this.tsbSalir.Click += new System.EventHandler(this.toolStripSalir_Click_1);
+            // 
+            // tsbLeer
+            // 
+            this.tsbLeer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLeer.Image = ((System.Drawing.Image)(resources.GetObject("tsbLeer.Image")));
+            this.tsbLeer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLeer.Name = "tsbLeer";
+            this.tsbLeer.Size = new System.Drawing.Size(23, 22);
+            this.tsbLeer.Text = "Leer";
+            this.tsbLeer.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // Form4
             // 
@@ -408,6 +419,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.DataGridView dgvPantalones;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbActualizar;
+        private System.Windows.Forms.ToolStripButton tsbLeer;
     }
 }

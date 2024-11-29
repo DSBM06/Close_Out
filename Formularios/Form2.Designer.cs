@@ -54,10 +54,13 @@
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvHistorial = new System.Windows.Forms.DataGridView();
+            this.btnMostrarHistorial = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -220,10 +223,11 @@
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 96);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 92);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(464, 279);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // iconButton1
             // 
@@ -232,7 +236,7 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.iconButton1.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(255, 394);
+            this.iconButton1.Location = new System.Drawing.Point(164, 394);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(49, 44);
             this.iconButton1.TabIndex = 2;
@@ -248,7 +252,7 @@
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 44;
-            this.iconPictureBox1.Location = new System.Drawing.Point(120, 394);
+            this.iconPictureBox1.Location = new System.Drawing.Point(23, 394);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(66, 44);
             this.iconPictureBox1.TabIndex = 3;
@@ -262,9 +266,8 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.iconButton2.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(406, 394);
+            this.iconButton2.Location = new System.Drawing.Point(283, 394);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.iconButton2.Size = new System.Drawing.Size(55, 44);
             this.iconButton2.TabIndex = 4;
             this.iconButton2.UseVisualStyleBackColor = false;
@@ -277,7 +280,7 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Download;
             this.iconButton3.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(525, 394);
+            this.iconButton3.Location = new System.Drawing.Point(414, 394);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(59, 44);
             this.iconButton3.TabIndex = 5;
@@ -288,7 +291,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 31);
+            this.label1.Location = new System.Drawing.Point(158, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 62);
             this.label1.TabIndex = 0;
@@ -304,12 +307,35 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvHistorial
+            // 
+            this.dgvHistorial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorial.Location = new System.Drawing.Point(479, 221);
+            this.dgvHistorial.Name = "dgvHistorial";
+            this.dgvHistorial.Size = new System.Drawing.Size(252, 150);
+            this.dgvHistorial.TabIndex = 8;
+            this.dgvHistorial.Tag = "";
+            this.dgvHistorial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // btnMostrarHistorial
+            // 
+            this.btnMostrarHistorial.Location = new System.Drawing.Point(565, 394);
+            this.btnMostrarHistorial.Name = "btnMostrarHistorial";
+            this.btnMostrarHistorial.Size = new System.Drawing.Size(67, 31);
+            this.btnMostrarHistorial.TabIndex = 9;
+            this.btnMostrarHistorial.Text = "Historial";
+            this.btnMostrarHistorial.UseVisualStyleBackColor = true;
+            this.btnMostrarHistorial.Click += new System.EventHandler(this.btnMostrarHistorial_Click_1);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(731, 476);
+            this.Controls.Add(this.btnMostrarHistorial);
+            this.Controls.Add(this.dgvHistorial);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconButton3);
@@ -328,6 +354,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +388,10 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgvHistorial;
+        private System.Windows.Forms.Button btnMostrarHistorial;
+        
     }
+      
+
 }

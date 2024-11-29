@@ -14,6 +14,9 @@ using Newtonsoft.Json;
 using System.IO;
 using Proyecto_Final_CloseOut.Servicios;
 using System.Collections.Concurrent;
+using static CloseOut.Estructuras.Productos;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Documents.Serialization;
 
 namespace Proyecto_Final_CloseOut.Formularios
 {
@@ -22,6 +25,8 @@ namespace Proyecto_Final_CloseOut.Formularios
         private List<RegistroProductos> productos;
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
+
+        public static List<MovimientoInventario> historialMovimientos = new List<MovimientoInventario>();
         public Form2()
         {
             InitializeComponent();
@@ -84,6 +89,16 @@ namespace Proyecto_Final_CloseOut.Formularios
             MostrarDatos();
         }
 
+        private void MostrarHistorial()
+        {
+            dgvHistorial.DataSource = null;
+            dgvHistorial.DataSource = historialMovimientos;
+        }
+
+        private void btnMostrarHistorial_Click(object sender, EventArgs e)
+        {
+            MostrarHistorial();
+        }
         private void Form2_Load(object sender, EventArgs e)
         { }
 
@@ -125,18 +140,42 @@ namespace Proyecto_Final_CloseOut.Formularios
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             try
             {
-                saveFileDialog1.Filter = "Archivo JSON (*.json)|*.json";
+                saveFileDialog1.Filter = "Archivo binario (*.bin)|*.bin";
                 saveFileDialog1.Title = "Guardar archivo de productos";
 
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = saveFileDialog1.FileName;
+
                     var productos = (List<RegistroProductos>)dataGridView1.DataSource;
-                    string json = JsonConvert.SerializeObject(productos, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText(filePath, json);
-                    MessageBox.Show("Archivo guardado exitosamente.", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (productos == null || productos.Count == 0)
+                    {
+                        MessageBox.Show("No hay productos para guardar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    using (FileStream fs = new FileStream(filePath, FileMode.Create))
+                    using (BinaryWriter writer = new BinaryWriter(fs))
+                    {
+                        
+                        writer.Write(productos.Count);
+
+                        
+                        foreach (var producto in productos)
+                        {
+                            writer.Write(producto.ID);               
+                            writer.Write(producto.Producto);         
+                            writer.Write(producto.Precio);            
+                            writer.Write(producto.Categoria);         
+                            writer.Write(producto.Cantidad);          
+                        }
+                    }
+
+                    MessageBox.Show("Archivo binario guardado exitosamente.", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -145,41 +184,90 @@ namespace Proyecto_Final_CloseOut.Formularios
             }
         }
 
+
+
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = "C:\\";
-            openFileDialog1.Filter = "Archivo JSON (*.json)|*.json";
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                try
-                {
-                    string ruta = openFileDialog1.FileName;
-                    string json = File.ReadAllText(ruta);
-                    productos = JsonConvert.DeserializeObject<List<RegistroProductos>>(json);
+                openFileDialog1.Filter = "Archivo binario (*.bin)|*.bin";
+                openFileDialog1.Title = "Abrir archivo de productos";
 
-                    if (productos != null && productos.Count > 0)
-                    {
-                        ActualizarDataGridView();
-                        MessageBox.Show("Archivo cargado exitosamente.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("El archivo no contiene datos o está vacío.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                catch (Exception ex)
+                
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string filePath = openFileDialog1.FileName;
+
+                    
+                    if (!File.Exists(filePath))
+                    {
+                        MessageBox.Show("El archivo seleccionado no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    
+                    List<RegistroProductos> productos = new List<RegistroProductos>();
+
+                 
+                    using (FileStream fs = new FileStream(filePath, FileMode.Open))
+                    using (BinaryReader reader = new BinaryReader(fs))
+                    {
+                        
+                        int count = reader.ReadInt32();
+
+                  
+                        if (count == 0)
+                        {
+                            MessageBox.Show("El archivo está vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        
+                        for (int i = 0; i < count; i++)
+                        {
+                            
+                            if (reader.BaseStream.Position + sizeof(int) + sizeof(decimal) > reader.BaseStream.Length)
+                            {
+                                MessageBox.Show("El archivo tiene un formato incorrecto o está dañado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+
+                            
+                            int id = reader.ReadInt32();
+                            string nombre = reader.ReadString();
+                            decimal precio = reader.ReadDecimal();
+                            string categoria = reader.ReadString();
+                            int cantidad = reader.ReadInt32();
+
+                            
+                            productos.Add(new RegistroProductos
+                            {
+                                ID = id,
+                                Producto = nombre,
+                                Precio = precio,
+                                Categoria = categoria,
+                                Cantidad = cantidad
+                            });
+                        }
+                    }
+
+                    
+                    dataGridView1.DataSource = productos;
+
+                    
+                    MessageBox.Show("Archivo binario cargado exitosamente.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No se seleccionó ningún archivo.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
 
         }
+
+
 
         private void MostrarDatos()
         {
@@ -281,16 +369,39 @@ namespace Proyecto_Final_CloseOut.Formularios
         {
             try
             {
-                saveFileDialog1.Filter = "Archivo JSON (*.json)|*.json";
+                saveFileDialog1.Filter = "Archivo binario (*.bin)|*.bin";
                 saveFileDialog1.Title = "Guardar archivo de productos";
 
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = saveFileDialog1.FileName;
+
                     var productos = (List<RegistroProductos>)dataGridView1.DataSource;
-                    string json = JsonConvert.SerializeObject(productos, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText(filePath, json);
-                    MessageBox.Show("Archivo guardado exitosamente.", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (productos == null || productos.Count == 0)
+                    {
+                        MessageBox.Show("No hay productos para guardar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    using (FileStream fs = new FileStream(filePath, FileMode.Create))
+                    using (BinaryWriter writer = new BinaryWriter(fs))
+                    {
+                        
+                        writer.Write(productos.Count);
+
+                        
+                        foreach (var producto in productos)
+                        {
+                            writer.Write(producto.ID);                
+                            writer.Write(producto.Producto);          
+                            writer.Write(producto.Precio);            
+                            writer.Write(producto.Categoria);         
+                            writer.Write(producto.Cantidad);         
+                        }
+                    }
+
+                    MessageBox.Show("Archivo binario guardado exitosamente.", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -301,40 +412,121 @@ namespace Proyecto_Final_CloseOut.Formularios
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = "C:\\";
-            openFileDialog1.Filter = "Archivo JSON (*.json)|*.json";
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                try
-                {
-                    string ruta = openFileDialog1.FileName;
-                    string json = File.ReadAllText(ruta);
-                    productos = JsonConvert.DeserializeObject<List<RegistroProductos>>(json);
+                
+                openFileDialog1.Filter = "Archivo binario (*.bin)|*.bin";
+                openFileDialog1.Title = "Abrir archivo de productos";
 
-                    if (productos != null && productos.Count > 0)
-                    {
-                        ActualizarDataGridView();
-                        MessageBox.Show("Archivo cargado exitosamente.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("El archivo no contiene datos o está vacío.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                catch (Exception ex)
+          
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string filePath = openFileDialog1.FileName;
+
+                  
+                    if (!File.Exists(filePath))
+                    {
+                        MessageBox.Show("El archivo seleccionado no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                   
+                    List<RegistroProductos> productos = new List<RegistroProductos>();
+
+                    
+                    using (FileStream fs = new FileStream(filePath, FileMode.Open))
+                    using (BinaryReader reader = new BinaryReader(fs))
+                    {
+                        
+                        int count = reader.ReadInt32();
+
+                        
+                        if (count == 0)
+                        {
+                            MessageBox.Show("El archivo está vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        
+                        for (int i = 0; i < count; i++)
+                        {
+                            
+                            if (reader.BaseStream.Position + sizeof(int) + sizeof(decimal) > reader.BaseStream.Length)
+                            {
+                                MessageBox.Show("El archivo tiene un formato incorrecto o está dañado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+
+                            
+                            int id = reader.ReadInt32();
+                            string nombre = reader.ReadString();
+                            decimal precio = reader.ReadDecimal();
+                            string categoria = reader.ReadString();
+                            int cantidad = reader.ReadInt32();
+
+                            
+                            productos.Add(new RegistroProductos
+                            {
+                                ID = id,
+                                Producto = nombre,
+                                Precio = precio,
+                                Categoria = categoria,
+                                Cantidad = cantidad
+                            });
+                        }
+                    }
+
+                    
+                    dataGridView1.DataSource = productos;
+
+                    
+                    MessageBox.Show("Archivo binario cargado exitosamente.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No se seleccionó ningún archivo.", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
 
         private void manualDeUsoToolStripMenuItem_Click(object sender, EventArgs e)
-        {}
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnMostrarHistorial_Click_1(object sender, EventArgs e)
+        {
+            MostrarHistorial();
+        }
+
+        private void historialDeIngresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pantalonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void camisasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

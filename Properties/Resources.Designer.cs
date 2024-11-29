@@ -63,6 +63,16 @@ namespace Proyecto_Final_CloseOut.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leer {
+            get {
+                object obj = ResourceManager.GetObject("leer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_11_21_at_10_01_57_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-11-21 at 10.01.57 PM", resourceCulture);
