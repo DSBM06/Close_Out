@@ -22,7 +22,9 @@ namespace Proyecto_Final_CloseOut.Formularios
 {
     public partial class Form2 : Form
     {
-        private List<RegistroProductos> productos;
+        private List<RegistroProductos> productos = new List<RegistroProductos>();
+
+
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
 
@@ -286,7 +288,7 @@ namespace Proyecto_Final_CloseOut.Formularios
             StringBuilder informe = new StringBuilder();
             informe.AppendLine("Informe de Pantalones:");
             informe.AppendLine("----------------------------");
-
+            var pantalones = Form4.productos.Where(p => p.Categoria.Contains("Pantalón")).ToList();
             foreach (var producto in Form4.productos)
             {
                 informe.AppendLine($"Nombre: {producto.Producto}, Precio: {producto.Precio}, Cantidad: {producto.Cantidad}");
@@ -337,6 +339,8 @@ namespace Proyecto_Final_CloseOut.Formularios
 
         private void informeGeneralToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+
             StringBuilder informe = new StringBuilder();
             informe.AppendLine("Informe General del dia:");
             informe.AppendLine("----------------------------");
@@ -431,7 +435,7 @@ namespace Proyecto_Final_CloseOut.Formularios
                     }
 
                    
-                    List<RegistroProductos> productos = new List<RegistroProductos>();
+                 
 
                     
                     using (FileStream fs = new FileStream(filePath, FileMode.Open))
