@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CloseOut.Estructuras;
+using Microsoft.ReportingServices.RdlExpressions.ExpressionHostObjectModel;
 using Proyecto_Final_CloseOut.Formularios;
 
 namespace Proyecto_Final_CloseOut

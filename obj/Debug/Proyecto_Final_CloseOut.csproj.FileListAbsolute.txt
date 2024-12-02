@@ -73,3 +73,239 @@ C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.cspr
 C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto.BB01E4F3.Up2Date
 C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.exe
 C:\Users\kmedi\Desktop\ClosetFlow - copia\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe.config
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto.BB01E4F3.Up2Date
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\ferga\Documents\Clase meto\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form7.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe.config
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\EnvDTE.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\stdole.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Alvaro\Downloads\Lito\qqqqqq\obj\Debug\Proyecto.BB01E4F3.Up2Date
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form7.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe.config
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\EnvDTE.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\stdole.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\kmedi\Desktop\Lito\qqqqqq\obj\Debug\Proyecto.BB01E4F3.Up2Date
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe.config
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\EnvDTE.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\stdole.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.AssemblyReference.cache
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Form1.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form2.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form3.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form4.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form5.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form6.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form7.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Properties.Resources.resources
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.GenerateResource.cache
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.csproj.CoreCompileInputs.cache
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto.BB01E4F3.Up2Date
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.exe
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.pdb
+C:\Users\SONY\Desktop\Closet Flow\qqqqqq\obj\Debug\Proyecto_Final_CloseOut.Formularios.Form8.resources

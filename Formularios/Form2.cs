@@ -17,18 +17,23 @@ using System.Collections.Concurrent;
 using static CloseOut.Estructuras.Productos;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Documents.Serialization;
+using Microsoft.Reporting.WinForms;
+using Proyecto_Final_CloseOut.Clase;
+using System.Windows.Controls;
 
 namespace Proyecto_Final_CloseOut.Formularios
 {
     public partial class Form2 : Form
     {
+        
         private List<RegistroProductos> productos = new List<RegistroProductos>();
-
+       
 
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
 
         public static List<MovimientoInventario> historialMovimientos = new List<MovimientoInventario>();
+        
         public Form2()
         {
             InitializeComponent();
@@ -88,13 +93,37 @@ namespace Proyecto_Final_CloseOut.Formularios
                 }));
             }
 
-            MostrarDatos();
+        
+            if (productos == null || productos.Count == 0)
+            {
+                MessageBox.Show("No hay productos para mostrar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MostrarDatos();
+            }
+
         }
 
         private void MostrarHistorial()
         {
-            dgvHistorial.DataSource = null;
-            dgvHistorial.DataSource = historialMovimientos;
+            try
+            {
+                if (historialMovimientos == null || historialMovimientos.Count == 0)
+                {
+                    throw new Exception("No hay movimientos en el historial para mostrar.");
+                }
+
+                dgvHistorial.DataSource = null;
+                dgvHistorial.DataSource = historialMovimientos;
+
+                MessageBox.Show("Historial de movimientos cargado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void btnMostrarHistorial_Click(object sender, EventArgs e)
@@ -102,7 +131,11 @@ namespace Proyecto_Final_CloseOut.Formularios
             MostrarHistorial();
         }
         private void Form2_Load(object sender, EventArgs e)
-        { }
+        {
+        
+
+        }
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         { }
@@ -498,7 +531,8 @@ namespace Proyecto_Final_CloseOut.Formularios
 
         private void manualDeUsoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form8 frm = new Form8();
+            frm.Show();
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -530,7 +564,22 @@ namespace Proyecto_Final_CloseOut.Formularios
         {
 
         }
+        
 
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportDataSource dataSource = new ReportDataSource("DataSet1", productos);
+            Form7 frm = new Form7();
+            frm.reportViewer1.LocalReport.DataSources.Clear();
+            frm.reportViewer1.LocalReport.DataSources.Add(dataSource);
+            frm.reportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto_Final_CloseOut.Reportes.ReporteCF.rdlc";
+            frm.reportViewer1.RefreshReport();
+            frm.Show();
+        }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

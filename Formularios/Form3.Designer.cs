@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tstAgregar = new System.Windows.Forms.ToolStripButton();
+            this.tstEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbCategoría = new System.Windows.Forms.ComboBox();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -56,11 +61,6 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvCamisetas = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tstAgregar = new System.Windows.Forms.ToolStripButton();
-            this.tstEliminar = new System.Windows.Forms.ToolStripButton();
-            this.tsbActualizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -85,6 +85,56 @@
             this.toolStrip1.TabIndex = 11;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // tstAgregar
+            // 
+            this.tstAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tstAgregar.Image = ((System.Drawing.Image)(resources.GetObject("tstAgregar.Image")));
+            this.tstAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstAgregar.Name = "tstAgregar";
+            this.tstAgregar.Size = new System.Drawing.Size(23, 22);
+            this.tstAgregar.Text = "Agregar";
+            this.tstAgregar.Click += new System.EventHandler(this.tstAgregar_Click);
+            // 
+            // tstEliminar
+            // 
+            this.tstEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tstEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tstEliminar.Image")));
+            this.tstEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEliminar.Name = "tstEliminar";
+            this.tstEliminar.Size = new System.Drawing.Size(23, 22);
+            this.tstEliminar.Text = "Eliminar";
+            this.tstEliminar.Click += new System.EventHandler(this.tstEliminar_Click);
+            // 
+            // tsbActualizar
+            // 
+            this.tsbActualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbActualizar.Image = ((System.Drawing.Image)(resources.GetObject("tsbActualizar.Image")));
+            this.tsbActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbActualizar.Name = "tsbActualizar";
+            this.tsbActualizar.Size = new System.Drawing.Size(23, 22);
+            this.tsbActualizar.Text = "Actualizar";
+            this.tsbActualizar.Click += new System.EventHandler(this.tsbActualizar_Click);
+            // 
+            // toolStripButton
+            // 
+            this.toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton.Image")));
+            this.toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton.Name = "toolStripButton";
+            this.toolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton.Text = "Salir";
+            this.toolStripButton.Click += new System.EventHandler(this.toolStripButton_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Leer";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // groupBox1
             // 
@@ -307,56 +357,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 14;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tstAgregar
-            // 
-            this.tstAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tstAgregar.Image = ((System.Drawing.Image)(resources.GetObject("tstAgregar.Image")));
-            this.tstAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstAgregar.Name = "tstAgregar";
-            this.tstAgregar.Size = new System.Drawing.Size(23, 22);
-            this.tstAgregar.Text = "Agregar";
-            this.tstAgregar.Click += new System.EventHandler(this.tstAgregar_Click);
-            // 
-            // tstEliminar
-            // 
-            this.tstEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tstEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tstEliminar.Image")));
-            this.tstEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEliminar.Name = "tstEliminar";
-            this.tstEliminar.Size = new System.Drawing.Size(23, 22);
-            this.tstEliminar.Text = "Eliminar";
-            this.tstEliminar.Click += new System.EventHandler(this.tstEliminar_Click);
-            // 
-            // tsbActualizar
-            // 
-            this.tsbActualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbActualizar.Image = ((System.Drawing.Image)(resources.GetObject("tsbActualizar.Image")));
-            this.tsbActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbActualizar.Name = "tsbActualizar";
-            this.tsbActualizar.Size = new System.Drawing.Size(23, 22);
-            this.tsbActualizar.Text = "Actualizar";
-            this.tsbActualizar.Click += new System.EventHandler(this.tsbActualizar_Click);
-            // 
-            // toolStripButton
-            // 
-            this.toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton.Image")));
-            this.toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton.Name = "toolStripButton";
-            this.toolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton.Text = "Salir";
-            this.toolStripButton.Click += new System.EventHandler(this.toolStripButton_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Leer";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // Form3
             // 

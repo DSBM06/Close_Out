@@ -21,10 +21,16 @@ namespace CloseOut.Estructuras
         public string Categoria { get; set; }
         public decimal Precio { get; set; }
         public int Cantidad { get; set; }
+        public DateTime Fecha { get; set; }
+
+        public string Detalles { get; set; }
+        public string TipoMovimiento { get; set; }
+
+
     }
 
     public class Productos
-    { 
+    {
         public int Codigo { get; set; }
         public string Producto { get; set; }
         public string Categoria { get; set; }
@@ -32,28 +38,39 @@ namespace CloseOut.Estructuras
         public int Cantidad { get; set; }
 
 
-        public Productos(int codigo, string producto, string categoria, decimal precio, int cantidad)
+        public Productos(int codigo, string producto1, string categoria, decimal precio, int cantidad)
         {
             Codigo = codigo;
-            Producto = producto;
+            Producto = producto1;
             Categoria = categoria;
             Precio = precio;
             Cantidad = cantidad;
         }
 
-        
 
-        
-        public class MovimientoInventario
+    }
+
+    public class MovimientoInventario
+    {
+
+        public DateTime Fecha{ get; set; }
+        public string TipoMovimiento { get; set; }
+        public string Producto { get; set; }
+        public int Cantidad { get; set; }
+        public string Detalles { get; set; }
+
+        public MovimientoInventario(DateTime fecha, string tipoMovimiento, string producto, int cantidad, string detalles)
         {
-            public DateTime Fecha { get; set; }
-            public string TipoMovimiento { get; set; }
-            public string Producto { get; set; }
-            public int Cantidad { get; set; }
-            public string Detalles { get; set; }
+            Fecha = fecha;
+            TipoMovimiento = tipoMovimiento;
+            Producto = producto;
+            Cantidad = cantidad;
+            Detalles = detalles;
         }
-    
 
 
-}
+
+    }
+
+        
 }

@@ -15,7 +15,11 @@ namespace Proyecto_Final_CloseOut.Formularios
 {
     public partial class Form5 : Form
     {
+        public static List<MovimientoInventario> Movimiento = new List<MovimientoInventario>();
         public static List<Productos> productos = new List<Productos>() { };
+
+
+        private object reportViewer1;
 
         private Form2 form2;
         internal static object historialMovimientos;
@@ -70,85 +74,186 @@ namespace Proyecto_Final_CloseOut.Formularios
 
         private void AgregarProducto()
         {
-            int nuevoCódigo = int.Parse(txtCodigo.Text);
-            string nuevoProducto = txtNombre.Text;
-            string nuevaCategoria = cmbCategoría.SelectedItem.ToString();
-            decimal nuevoPrecio = decimal.Parse(txtPrecio.Text);
-            int nuevaCantidad = int.Parse(txtStock.Text);
-
-            productos.Add(new Productos(nuevoCódigo, nuevoProducto, nuevaCategoria, nuevoPrecio, nuevaCantidad));
-            ActualizarDataGridView();
-            LimpiarCampos();
-            CuentaProductosCategoria();
-            CargarDatosEnGrafico();
-
-            // Registro del movimiento en el historial
-            Form2.historialMovimientos.Add(new MovimientoInventario
+            try
             {
-                Fecha = DateTime.Now,
-                TipoMovimiento = "Ingreso",
-                Producto = nuevoProducto,
-                Cantidad = nuevaCantidad,
-                Detalles = $"Se agregó el producto {nuevoProducto} con cantidad {nuevaCantidad}."
-            });
+
+                if (string.IsNullOrWhiteSpace(txtCodigo.Text))
+                    throw new Exception("El campo 'Código' no puede estar vacío.");
+
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
+                    throw new Exception("El campo 'Nombre' no puede estar vacío.");
+
+                if (string.IsNullOrWhiteSpace(txtPrecio.Text))
+                    throw new Exception("El campo 'Precio' no puede estar vacío.");
+
+                if (string.IsNullOrWhiteSpace(txtStock.Text))
+                    throw new Exception("El campo 'Stock' no puede estar vacío.");
+
+                if (cmbCategoría.SelectedItem == null)
+                    throw new Exception("Debe seleccionar una categoría.");
+
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtCodigo.Text, @"^[0-9]+$"))
+                    throw new Exception("El campo 'Código' solo debe contener números.");
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z0-9 ]+$"))
+                    throw new Exception("El campo 'Nombre' no puede contener caracteres especiales.");
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPrecio.Text, @"^[0-9]+(\.[0-9]{1,2})?$"))
+                    throw new Exception("El campo 'Precio' debe ser un número válido con hasta dos decimales.");
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtStock.Text, @"^[0-9]+$"))
+                    throw new Exception("El campo 'Stock' solo debe contener números.");
+
+                int nuevoCodigo = int.Parse(txtCodigo.Text);
+                string nuevoProducto = txtNombre.Text;
+                string nuevaCategoria = cmbCategoría.SelectedItem.ToString();
+                decimal nuevoPrecio = decimal.Parse(txtPrecio.Text);
+                int nuevaCantidad = int.Parse(txtStock.Text);
+
+                Form2.historialMovimientos.Add(new MovimientoInventario
+               (
+                 DateTime.Now,
+                 "Ingreso",
+                 nuevoProducto,
+                 nuevaCantidad,
+                 $"Se agregó el producto {nuevoProducto} con cantidad {nuevaCantidad}."
+               ));
+                productos.Add(new Productos(nuevoCodigo, nuevoProducto, nuevaCategoria, nuevoPrecio, nuevaCantidad));
+                ActualizarDataGridView();
+                LimpiarCampos();
+                CuentaProductosCategoria();
+                CargarDatosEnGrafico();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("El formato de los datos ingresados no es válido. Verifique los campos numéricos.", "Error de formato");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void ActualizarDataGridView()
         {
-            dgvZapatos.DataSource = null;
-            dgvZapatos.DataSource = Form5.productos;
+            try
+            {
+                if (productos == null || productos.Count == 0)
+                {
+                    throw new Exception("No hay productos para mostrar.");
+                }
+
+                dgvZapatos.DataSource = null;
+                dgvZapatos.DataSource = productos;
+
+                MessageBox.Show("Productos cargados con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void tstEliminar_Click(object sender, EventArgs e)
         {
-            int i = dgvZapatos.CurrentCell.RowIndex;
-            var productoEliminado = productos[i];
-            productos.RemoveAt(i);
-            ActualizarDataGridView();
-            ActualizarMensajeEstado();
-            CuentaProductosCategoria();
-            CargarDatosEnGrafico();
-
-            // Registro del movimiento en el historial
-            Form2.historialMovimientos.Add(new MovimientoInventario
+            try
             {
-                Fecha = DateTime.Now,
-                TipoMovimiento = "Salida",
-                Producto = productoEliminado.Producto,
-                Cantidad = productoEliminado.Cantidad,
-                Detalles = $"Se eliminó el producto {productoEliminado.Producto} con cantidad {productoEliminado.Cantidad}."
-            });
+
+                if (dgvZapatos.CurrentRow == null)
+                {
+                    throw new Exception("Debe seleccionar un producto para eliminar.");
+                }
+
+
+                int i = dgvZapatos.CurrentCell.RowIndex;
+
+
+                var confirmacion = MessageBox.Show($"¿Está seguro de que desea eliminar el producto '{productos[i].Producto}'?",
+                                                   "Confirmación de eliminación",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Warning);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+
+                    var productoEliminado = productos[i];
+
+
+                    productos.RemoveAt(i);
+
+
+                    ActualizarDataGridView();
+                    ActualizarMensajeEstado();
+                    CuentaProductosCategoria();
+                    CargarDatosEnGrafico();
+
+                    Form2.historialMovimientos.Add(new MovimientoInventario
+                    (
+                        DateTime.Now,
+                        "Salida",
+                        productoEliminado.Producto,
+                        productoEliminado.Cantidad,
+                        $"Se eliminó el producto {productoEliminado.Producto} con cantidad {productoEliminado.Cantidad}."
+                    ));
+
+
+                    MessageBox.Show($"Producto '{productoEliminado.Producto}' eliminado correctamente.", "Eliminación exitosa");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void tsbActualizar_Click(object sender, EventArgs e)
         {
 
-            int Codigo = int.Parse(txtCodigo.Text);
-            string Producto = txtNombre.Text;
-            string Categoria = cmbCategoría.SelectedItem.ToString();
-            decimal Precio = decimal.Parse(txtPrecio.Text);
-            int Cantidad = int.Parse(txtStock.Text);
-
-            Productos producto = new Productos(Codigo, Producto, Categoria, Precio, Cantidad);
-
-            int index = productos.FindIndex(p => p.Codigo == producto.Codigo);
-            if (index >= 0)
+            try
             {
-                productos[index] = producto;
+                int Codigo = int.Parse(txtCodigo.Text);
+                string Producto = txtNombre.Text;
+                string Categoria = cmbCategoría.SelectedItem?.ToString() ?? throw new Exception("Seleccione una categoría.");
+                decimal Precio = decimal.Parse(txtPrecio.Text);
+                int Cantidad = int.Parse(txtStock.Text);
+
+                Productos producto = new Productos(Codigo, Producto, Categoria, Precio, Cantidad);
+
+                int index = productos.FindIndex(p => p.Codigo == producto.Codigo);
+                if (index >= 0)
+                {
+                    productos[index] = producto;
+                }
+                else
+                {
+                    throw new Exception("El producto no existe en la lista.");
+                }
+
+                ActualizarDataGridView();
+                MessageBox.Show("Producto actualizado con éxito.");
+
+                Form2.historialMovimientos.Add(new MovimientoInventario
+                (
+                    DateTime.Now,
+                    "Actualización",
+                    producto.Producto,
+                    producto.Cantidad,
+                    $"Se actualizó el producto {producto.Producto} con cantidad {producto.Cantidad}."
+                ));
             }
-
-            ActualizarDataGridView();
-            MessageBox.Show("Producto actualizado con éxito.");
-
-            // Registro del movimiento en el historial
-            Form2.historialMovimientos.Add(new MovimientoInventario
+            catch (FormatException ex)
             {
-                Fecha = DateTime.Now,
-                TipoMovimiento = "Actualización",
-                Producto = producto.Producto,
-                Cantidad = producto.Cantidad,
-                Detalles = $"Se actualizó el producto {producto.Producto} con cantidad {producto.Cantidad}."
-            });
+                MessageBox.Show($"Error de formato: {ex.Message}\nVerifique los valores ingresados.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}\nAsegúrese de seleccionar una categoría válida.", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void LimpiarCampos()
         {
@@ -213,7 +318,6 @@ namespace Proyecto_Final_CloseOut.Formularios
             {
                 totalStock += producto.Cantidad;
 
-                // Verificar si el stock está por debajo del nivel requerido
                 if (producto.Cantidad < 10)
                 {
                     MessageBox.Show($"El producto {producto.Producto} está bajo en stock. Quedan solo {producto.Cantidad} unidades.", "Advertencia de Stock Bajo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
